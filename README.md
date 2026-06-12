@@ -1,4 +1,4 @@
-# VPC PEERING USING TERRAFORM
+# Different Region VPC Peering
 
 A Terraform project that provisions VPCs in different region in  AWS environment hosting three independent microservices:
 
