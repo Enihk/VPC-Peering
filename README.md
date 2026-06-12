@@ -26,14 +26,14 @@ Each service is deployed on a dedicated EC2 instance and isolated within its own
                   Account Service
                     Port: 9092
                    Account-VPC
-                192.168.0.0/16
+                   10.1.0.0/16
                         │
                         │ VPC Peering
                         ▼
                  Statement Service
                     Port: 9093
                   Statement-VPC
-                 172.16.0.0/16
+                  192.168.0.0/16
 ```
 
 Service communication follows a linear chain:
@@ -53,7 +53,7 @@ Users cannot access Account and Statement Services directly.
 | VPC                  | CIDR Block     | Service           |
 | -------------------- | -------------- | ----------------- |
 | customer-profile-vpc | 10.0.0.0/16    | Customer Service  |
-| account-vpc          | 10.1.0.0/16 | Account Service   |
+| account-vpc          | 10.1.0.0/16    | Account Service   |
 | statement-vpc        | 192.168.0.0/16  | Statement Service |
 
 ---
